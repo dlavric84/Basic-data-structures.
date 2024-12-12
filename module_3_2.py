@@ -1,9 +1,9 @@
 def send_email(message, recipient, *, sender='university.help@gmail.com'):
-    suffixes = ('.com', '.ru', '.net')
+    domain = ('.com', '.ru', '.net')
     if ('@' not in recipient
             or '@' not in sender
-            or not recipient.endswith(suffixes)
-            or not sender.endswith(suffixes)):
+            or not recipient.endswith(domain)
+            or not sender.endswith(domain)):
         print(f'Невозможно отправить письмо с адреса {sender} на'
               f' адрес {recipient}')
     elif recipient == sender:
